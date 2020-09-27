@@ -1,0 +1,283 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+width: 100%;
+
+
+}
+
+
+nav {
+  
+  padding: 24px;
+  text-align: center;
+  
+  
+}
+
+nav a {
+  transition: 0.3s ease;
+
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  padding: 20px 0;
+  margin: 0 5px;
+  font-size: 17px;
+}
+nav a:hover {
+ 
+  border-bottom: 2px solid white;
+  padding: 6px 0; 
+}
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, {
+    background-attachment: scroll;
+  }
+}
+
+.bgimg-1, .bgimg-2  {
+  position: relative;
+  opacity: 0.7;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+}
+.bgimg-1 {
+ background-image: linear-gradient(rgba(26, 26, 26,0.8) , rgba(89, 89, 89,0.5)) , url("https://i.pinimg.com/originals/9e/47/5d/9e475dbbdadfcee17e5d741e85b219b5.gif");
+  min-height: 100%;
+    overflow-x: hidden;
+}
+
+.bgimg-2 {
+  background-image:linear-gradient(rgba(51, 51, 51,0.6) , rgba(191, 191, 191,0.3)) ,  url("https://cdn.pixabay.com/photo/2017/09/30/15/10/pizza-2802332_960_720.jpg");
+  min-height: 400px;
+   overflow-x: hidden;
+
+}
+
+
+
+
+.caption {
+  position: absolute;
+  left: 0;
+ margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
+
+.caption-1 {
+  position: absolute;
+  left: 0;
+ margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption-1 span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
+
+
+.learn {
+  color: white;
+  font-size: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 150px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2 {
+    background-attachment: scroll;
+  }
+}
+
+.fade {
+ opacity: 1;
+}
+
+.info {
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  margin-top: 50px;
+  color: grey;
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+
+
+.info-container{
+   display: inline-block;
+   vertical-align: top;
+   padding: 0 0 0 5px;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+
+}
+
+.info-container p{
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+.bgimg-2 , .pic  , .info-container{
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+}
+
+@media screen and (max-width: 1050px) {
+.bgimg-2  , .info-container{
+  width: 100%;
+  height: 100%;
+}
+}
+
+.parg {
+  color: white;
+  font-size: 18px;
+
+}
+
+@media screen and (max-width: 650px) {
+.parg {
+  
+font-size: 16px;
+}
+}
+
+
+.pic {
+    transition: all 1.5s ease;
+}
+ 
+.pic:hover {
+    transform: scale(1.1);
+}
+
+.chef{
+    transition: all 1.5s ease;
+}
+ 
+.chef:hover {
+    transform: scale(1.1);
+}
+
+.card {
+   transition: all 1.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 760px) {
+  .bgimg-1  {
+    height: 1400px;
+  }
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  top: 0;
+  left: 0;
+  right: 0;
+ /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  overflow-x: hidden;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+   overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+   overflow-x: hidden;
+}
+
+.card .mb-2 {
+  text-align: center;
+   overflow-x: hidden;
+}
+
+
