@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />
 <!--bootstrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -20,7 +21,7 @@
 <body>
 
 <!--First pg -->
-<div class="bgimg-1">
+<div class="bgimg-1" data-aos="fade-down">
  <!--home pg-->
 <nav class="navbar navbar-expand-lg navbar-dark " style="font-weight: bold; ">
   <hr style="width: 10px">
@@ -31,25 +32,25 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="inedx.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="about.html">About</a>
       </li>
       
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Menu</a>
+        <a class="nav-link" href="menu.html">Menu</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="learn"> Eat outside the box </div>
+<div class="learn" data-aos="zoom-in"> Eat outside the box </div>
 
 
  <div class="caption"> 
@@ -61,7 +62,7 @@
 
 <!--meet our chef -->
 
-<div class="fade">
+
   <span class="border-1" style="background-color:white;text-align:center;padding:20px 30px;text-align: justify; color: #777;"> 
 
   <h3 style="text-align:center; margin-bottom: 10px;"><i class="fas fa-utensils"></i>  MEET OUR CHEF  <i class="fas fa-utensils"></i></h3>
@@ -72,7 +73,7 @@
   <p class="title" style="margin-top: 10px;">A chef is in charge of the kitchen in restaurants or other places where food is served. They watch all activity and food preparation with any staff that would assist in the kitchen. They supervise the preparation of food for its garnishing and presentation, as well as, the seasonings for a perfect taste.</p>
  
   <p><button>MORE</button></p>
-</div>
+
 </div>
 
 
@@ -81,7 +82,7 @@
 <!--end of first pg -->
 <div class="bgimg-2" style="margin:0px;">
   <div class="caption-1">
-    <div class="fade">
+    
   
 
 <h3 style="text-align:center; color: white; margin-bottom: 10px; margin-top: 0px; background-color: black;"><i class="fas fa-cloud-meatball"></i>  FOOD OF THE WEEK  <i class="fas fa-cloud-meatball"></i>  </h3>
@@ -99,13 +100,13 @@
     </div>
 </div>
 
-</div>
+
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:#000000;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-    <div class="fade" style="margin: 0px">
+   
     <h3 style="text-align:center; margin-bottom: 10px;"><i class="fas fa-star"></i>  ALL TIME FAVOURITES  <i class="fas fa-star"></i></h3>
 
   <div class="card-group">
@@ -132,7 +133,7 @@
   </div>
 </div>
   
-  </div>
+ 
   </div>
 </div>
 <!--
@@ -200,7 +201,7 @@
 -->
 
 
-<div class="bgimg-1">
+<div class="bgimg-1" id="last">
   <div class="caption">
   
   <!--Carousel Wrapper-->
@@ -346,7 +347,12 @@
 </div>
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  AOS.init({
+  duration: 1200,
+})
+</script>
 
 
 <!--bootstrap CDN -->
