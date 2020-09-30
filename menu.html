@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" >
+<!--bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!--Font awesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+    overflow-x: hidden;
+}
+nav {
+  
+  padding: 24px;
+  text-align: center;
+  
+  
+}
+
+nav a {
+  transition: 0.3s ease;
+
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  padding: 20px 0;
+  margin: 0 5px;
+  font-size: 17px;
+}
+nav a:hover {
+ 
+  border-bottom: 2px solid white;
+  padding: 6px 0; 
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+
+}
+
+@media screen and (min-width: 575px) {
+ .card-img-top { width: 100%; height: 16vw; object-fit: cover; }
+}
+.bgimg-1 {
+  background-image: linear-gradient(rgba(26, 26, 26,0.8) , rgba(89, 89, 89,0.5)) ,  url("https://images.unsplash.com/photo-1533777324565-a040eb52facd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=721&q=80");
+  min-height: 100%;
+  overflow-y: hidden;
+}
+
+.bgimg-2 {
+  background-image: url("https://images.unsplash.com/photo-1542528180-a1208c5169a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=757&q=80");
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.bgimg-3 {
+  background-image: url("img_parallax3.jpg");
+  min-height: 400px;
+}
+
+.center {
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption-1 {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.learn {
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 150px;
+}
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.card-img-top {
+    transition: all 1.5s ease;
+  
+}
+ 
+.card-img-top:hover {
+    transform: scale(1.08);
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .bgimg-1  {
+    height: 1400px;
+  }
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  top: 0;
+  left: 0;
+  right: 0;
+ /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  overflow-x: hidden;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+   overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+   overflow-x: hidden;
+}
+
+.card .mb-2 {
+  text-align: center;
+   overflow-x: hidden;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="bgimg-1" data-aos="fade-down">
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="font-weight: bold; ">
+  
+  <div class="navbar-brand">FOODIE <i class="fas fa-utensils" style="font-size: 40px"></i> </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="final.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+  <div class="caption"> 
+  <span class="border">OUR MENU</span>
+
+  <div class="learn" data-aos="zoom-in"> 
+Quality food for quality people. </div>
+
+
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;" >
+  <h3 style="text-align:center;" >FOOD ITEM</h3>
+  
+<!-- As a link -->
+
+<div class="card-group "  style="text-align: center;">
+  <div class="card" >
+    <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/Wg70lmDc8eoCuXu3KCoSp0tcNZUnCOAKKicrTNW0Um2-G1ndfn-fZCW8UzD3g8-oo8-l4YacoISP5mvx4W21gmS3N2WhVEMD1pSsoGAAjB37YGBjh1MYsRm6i6m8mX41RUsCycqygg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Breakfast</h5>
+      </div>
+  </div>
+  <div class="card" >
+    <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0846/4264/products/shutterstock_143034367_8f7d3adb-7b04-45c2-87b1-fdbb0cd25330_2000x.png?v=1589239593" alt="Card image cap">
+    <div class="card-body" >
+      <h5 class="card-title">Lunch</h5>
+     
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://www.pngkey.com/png/full/254-2544540_we-are-the-best-quality-and-traditional-restaurant.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Dinner</h5>
+     
+    </div>
+  </div>
+</div>
+
+
+<br> <br>
+<!--second -->
+
+<div class="card-group "  style="text-align: center;">
+  <div class="card" >
+  
+    <img class="card-img-top" src="https://www.freepngimg.com/thumb/juice/4-2-juice-png-clipart.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Juice</h5>
+      </div>
+  </div>
+  <div class="card" >
+    <img class="card-img-top" src="https://www.kindpng.com/picc/m/3-36293_soft-drink-png-soft-drinks-in-glass-transparent.png" alt="Card image cap">
+    <div class="card-body" >
+      <h5 class="card-title">Soft Drinks</h5>
+     
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvJVJZG8GpZIsXjlH0r-7-P68UufSLgkT06Q&usqp=CAU" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Mixed Drinks</h5>
+     
+    </div>
+  </div>
+</div>
+
+
+<br> <br>
+<!--second -->
+
+<div class="card-group "  style="text-align: center;">
+  <div class="card" >
+  
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcStGvLNLFvHof1ACfpRTihP36qdnWgxpJotbg&usqp=CAU" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Desserts</h5>
+      </div>
+  </div>
+  <div class="card" >
+    <img class="card-img-top" src="https://purepng.com/public/uploads/large/purepng.com-birthday-cakefood-chocolate-cake-sweet-tasty-birthday-eat-delicious-941524600851xxygd.png" alt="Card image cap">
+    <div class="card-body" >
+      <h5 class="card-title">Cake</h5>
+     
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://static.carthrottle.com/workspace/uploads/memes/cookies-54f5044c69c47.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Cookies</h5>
+     
+    </div>
+  </div>
+</div>
+
+
+<!-- As a heading -->
+<!--
+
+
+
+<br> <br>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="color: black;">
+ 
+
+ <ul class="navbar-nav" >
+   <span class="navbar-brand mb-0 h1"><div class="fooda">
+  <img src="https://www.pngarts.com/files/1/Ice-Cream-Desserts-Transparent-Background-PNG.png" alt="avatar" class="foodb">
+</div></span>
+      <li class="nav-item ">
+        <a class="nav-link" href="#" style="color: black;">Dessert</a>
+      </li>
+       <span class="navbar-brand mb-0 h1"><div class="fooda" 
+      >
+  <img src="https://purepng.com/public/uploads/large/purepng.com-birthday-cakefood-chocolate-cake-sweet-tasty-birthday-eat-delicious-941524600851xxygd.png" alt="avatar" class="foodb">
+</div></span>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: black;">Cake</a>
+      </li>
+      <span class="navbar-brand mb-0 h1"><div class="fooda">
+  <img src="https://static.carthrottle.com/workspace/uploads/memes/cookies-54f5044c69c47.jpg" alt="avatar" class="foodb">
+</div></span>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: black;">Cookies</a>
+      </li>
+
+    
+    </ul>
+
+</nav>
+
+
+-->
+
+</div>
+
+<div class="bgimg-2" >
+<!--
+  <img src="https://purepng.com/public/uploads/medium/purepng.com-waiterwaiterrestaurant-workerbar-servefood-drink-supplies-1421526977617mewfx.png" class="wi">
+    <div class="learn" style="z-index: 2; float: right;"> 
+Food , Folks and Fun </div>
+
+-->
+  <div class="caption"> 
+  <span class="border">Food, Folks and Fun</span>
+  </div>
+
+
+  </div>
+
+
+
+  <img src="https://img.freepik.com/free-vector/colorful-sales-banners-collection-concept_23-2148403393.jpg?size=626&ext=jpg" class="center">
+
+
+
+
+<div class="bgimg-1">
+  <div class="caption-1" >
+  
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" >
+
+  <!--Controls-->
+  <div class="controls-top" >
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left" style="color: transparent;"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right" style="color: transparent;"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators" >
+    <li data-target="#multi-item-example" data-slide-to="0" class="active" style="background-color: transparent;"></li>
+    <li data-target="#multi-item-example" data-slide-to="1" style="background-color: transparent;"></li>
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox" style="margin:0">
+
+    <!--First slide-->
+    <div class="carousel-item active" style="margin:0">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <div class="container">
+          <img class="card-img-top"
+            src="https://www.cookforindia.com/wp-content/uploads/2016/05/mushroom-tikka-3-scaled.jpg" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Mashroom Tikka</p>
+       
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <div class="container">
+          <img class="card-img-top"
+            src="https://www.cookwithmanali.com/wp-content/uploads/2017/03/Best-Kadai-Paneer-500x375.jpg" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Kadai Paneer</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <div class="container">
+          <img class="card-img-top"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRj-NDMUdjCg11YeS34RByYZmaswHkcl91ADA&usqp=CAU" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Aloo Matar</p>
+        </div>
+      </div>
+    </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <div class="container">
+          <img class="card-img-top"
+            src="https://yummyindiankitchen.com/wp-content/uploads/2015/11/how-to-make-chicken-korma.jpg" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Chicken Korma</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+           <div class="container">
+          <img class="card-img-top"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRchnT7fh1Ie4lt4p_8wx5kaZSwxt2gw5xXhQ&usqp=CAU" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Dum Aloo</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+           <div class="container">
+           <img class="card-img-top"
+            src="https://lh3.googleusercontent.com/SsX1CA-BMhlUJh5WAJ8OJ-6n4XTrCfI2Yd2lkVFTg6J37I0yGbfyAS8K9uVHz-5S1m6ThHzUcsrGxMgFggzrvNZKAZnrP4KfgA" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">  Gobi Mashroom</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+           <div class="container">
+           <img class="card-img-top"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHBNkCg3WjIfikHKpfIhrebS0fM_XwEqHurg&usqp=CAU" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Salad</p>
+        </div>
+      </div>
+    </div>
+      
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+           <div class="container">
+          <img class="card-img-top"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyTh57V_KmQNBbWIqTby_QiUiJSEMORIa1xg&usqp=CAU" alt="Card image cap" height="200px">
+            <div class="overlay"><i class="far fa-heart"></i></div>
+             <p class="card-text">Chana Masala</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!--/.Second slide-->
+
+   
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper--> 
+<div style="background-color: white;">
+ <h3 style="text-align:center ; margin-top: 20px; margin-bottom: 20px; background-color: white"><br> <br> <i class="fas fa-phone-alt"></i> Contact Us : </h3>
+  
+<p> Tel: 123-456-7890  |  Email: info@mysite.com </p>
+<footer>
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> foodie.com</a>
+    </footer>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  AOS.init({
+  duration: 1200,
+})
+</script>
+
+<!--bootstrap CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+</html>
