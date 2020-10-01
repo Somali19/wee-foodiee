@@ -43,13 +43,74 @@ nav a:hover {
   border-bottom: 2px solid white;
   padding: 6px 0; 
 }
+@media screen and (max-width: 300px) {
+  #last {
+    height: 1300px;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  #last {
+    height: 1300px;
+  }
+}
+
+.info-container{
+   display: inline-block;
+   vertical-align: top;
+   padding: 0 0 0 5px;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.info-container p{
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  margin-top: 50px;
+  color: grey;
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
 
 .column {
   float: left;
   width: 50%;
   padding: 5px;
 }
+.card {
+   transition: all 1.5s ease;
+}
 
+.card:hover {
+    transform: scale(1.05);
+}
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
@@ -57,7 +118,7 @@ nav a:hover {
   display: table;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -74,7 +135,7 @@ nav a:hover {
 .bgimg-1 {
   background-image: linear-gradient(rgba(26, 26, 26,0.8) , rgba(89, 89, 89,0.5)) ,  url("https://images.unsplash.com/photo-1533777324565-a040eb52facd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=721&q=80");
   min-height: 100%;
-  overflow-y: hidden;
+  
 }
 
 .bgimg-2 {
@@ -82,7 +143,6 @@ nav a:hover {
   min-height: 400px;
   overflow: hidden;
 }
-
 
 
 .center {
@@ -139,9 +199,14 @@ h3 {
     transform: scale(1.08);
 }
 
+.card .mb-2 {
+  text-align: center;
+   overflow-x: hidden;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2 {
     background-attachment: scroll;
   }
 }
@@ -182,10 +247,6 @@ h3 {
    overflow-x: hidden;
 }
 
-.card .mb-2 {
-  text-align: center;
-   overflow-x: hidden;
-}
 
 
 
@@ -205,15 +266,15 @@ h3 {
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item ">
-        <a class="nav-link" href="index.html">Home </a>
+        <a class="nav-link" href="final.html">Home </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
+      <li class="nav-item ">
+        <a class="nav-link" href="about.html">About </a>
       </li>
       
       
       <li class="nav-item active">
-        <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span> </a>
       </li>
 
       <li class="nav-item">
@@ -230,14 +291,20 @@ h3 {
 Quality food for quality people. </div>
 
 
+
+
+
   </div>
+
+
+  
 </div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;" >
-  <h3 style="text-align:center;" >FOOD ITEM</h3>
-  
-<!-- As a link -->
 
+<span class="border-1" style="background-color:white;text-align:center;padding:20px 30px;text-align: justify; color: #777;"> 
+
+  <h3 style="text-align:center; margin-bottom: 10px;"><i class="fas fa-utensils"></i> FOOD ITEM  <i class="fas fa-utensils"></i></h3>
+ </span>
 <div class="card-group "  style="text-align: center;">
   <div class="card" >
     <img class="card-img-top" src="https://www.feastenterprises.com/sites/default/files/imce/ts/grand-slam-breakfast.png" alt="Card image cap">
@@ -260,6 +327,14 @@ Quality food for quality people. </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+<br> <br>
+<!--second -->
 
 
 <br> <br>
@@ -319,6 +394,17 @@ Quality food for quality people. </div>
 
 
 <!-- As a heading -->
+
+
+
+
+<br> <br>
+<!--second -->
+
+
+
+
+<!-- As a heading -->
 <!--
 
 
@@ -373,14 +459,10 @@ Food , Folks and Fun </div>
 
   </div>
 
+ <img src="https://img.freepik.com/free-vector/colorful-sales-banners-collection-concept_23-2148403393.jpg?size=626&ext=jpg" class="center">
 
 
-  <img src="https://img.freepik.com/free-vector/colorful-sales-banners-collection-concept_23-2148403393.jpg?size=626&ext=jpg" class="center">
-
-
-
-
-<div class="bgimg-1">
+<div class="bgimg-1" id="last">
   <div class="caption-1" >
   
 
@@ -539,7 +621,7 @@ Food , Folks and Fun </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-<!--end-->
+
 
 </body>
 </html>
