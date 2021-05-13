@@ -30,7 +30,7 @@ The website contain four section : Home , About , Menu and Contact.
   
   
 # About :
-  It contain information about the restruant Foodie
+  It contain information about the restaurant Foodie
   
   
 # Menu :
